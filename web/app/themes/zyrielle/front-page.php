@@ -11,4 +11,4 @@ $context['banner'] = [
 ];
 
 $context['post'] = $timber_post;
-Timber::render( 'front-page.twig', $context );
+Timber::render( 'templates/front-page.twig', $context );

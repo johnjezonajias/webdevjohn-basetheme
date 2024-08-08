@@ -1,6 +1,6 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
+{% include 'layouts/html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -16,7 +16,7 @@
 						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'items': menu.get_items} %}
+						{% include "partials/menu.twig" with {'items': menu.get_items} %}
 					</nav><!-- #nav -->
 				</div>
 			{% endblock %}
@@ -38,7 +38,7 @@
 
 		{% block footer %}
 			<footer id="footer">
-				{% include 'footer.twig' %}
+				{% include 'partials/footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}

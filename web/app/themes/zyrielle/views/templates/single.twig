@@ -1,4 +1,4 @@
-{% extends "base.twig" %}
+{% extends "layouts/base.twig" %}
 
 {% block content %}
 	<div class="content-wrapper">
@@ -22,7 +22,7 @@
 				    {% if post.comments %}
 					<h3> comments </h3>
 					{% for cmt in post.comments %}
-					    {% include "comment.twig" with {comment:cmt} %}
+					    {% include "partials/comment.twig" with {comment:cmt} %}
 					{% endfor %}
 				    {% endif %}
 				</div>
@@ -31,7 +31,7 @@
 					<p> comments for this post are closed </p>
 				{% else %}
 				    <!-- comment form -->
-				    {% include "comment-form.twig" %}
+				    {% include "partials/comment-form.twig" %}
 				{% endif %}
 			</section>
 		</article>
